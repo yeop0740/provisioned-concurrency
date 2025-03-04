@@ -14,3 +14,6 @@ export const NODE_ENV_UPPER = convertToUpperCaseAll(NODE_ENV);
 
 export const DINNER_TIME_START = process.env.DINNER_TIME_START ?? (() => { throw new Error('환경 변수 DINNER_TIME_START 이(가) 설정되지 않았습니다.'); })();
 export const DINNER_TIME_END = process.env.DINNER_TIME_END ?? (() => { throw new Error('환경 변수 DINNER_TIME_END 이(가) 설정되지 않았습니다.'); })();
+
+export const TEST_TIME_START = '2025-03-04T10:58:00.000Z'
+export const TEST_TIME_END = '2025-03-04T11:10:00.000Z'
