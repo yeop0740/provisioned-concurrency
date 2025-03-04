@@ -12,3 +12,13 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 * `npx cdk deploy`  deploy this stack to your default AWS account/region
 * `npx cdk diff`    compare deployed stack with current state
 * `npx cdk synth`   emits the synthesized CloudFormation template
+
+aws cli 를 통해 synth 를 실행할 수 있습니다.
+```shell
+npx cdk synth --profile <profile>
+```
+
+aws cli 를 통해 deploy 를 실행할 수 있습니다.
+```shell
+npx cdk deploy --profile <profile>
+```
