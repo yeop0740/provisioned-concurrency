@@ -83,7 +83,7 @@ export class GoondoriProvisionedConcurrencyStack extends cdk.Stack {
       {
         serviceNamespace: ServiceNamespace.LAMBDA,
         maxCapacity: 10,
-        minCapacity: 1,
+        minCapacity: 0,
         resourceId: `function:${graphqlLambda.functionName}:${lambdaAlias.aliasName}`,
         scalableDimension: "lambda:function:ProvisionedConcurrency",
       }
