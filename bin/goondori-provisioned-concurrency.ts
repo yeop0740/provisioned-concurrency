@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import * as cdk from 'aws-cdk-lib';
 import { GoondoriProvisionedConcurrencyStack } from '../lib/goondori-provisioned-concurrency-stack';
+import {ACCOUNT_ID, NODE_ENV_PASCAL, REGION} from "../config";
 
 const app = new cdk.App();
 new GoondoriProvisionedConcurrencyStack(app, 'GoondoriProvisionedConcurrencyStack', {
@@ -11,6 +12,8 @@ new GoondoriProvisionedConcurrencyStack(app, 'GoondoriProvisionedConcurrencyStac
   /* Uncomment the next line to specialize this stack for the AWS Account
    * and Region that are implied by the current CLI configuration. */
   // env: { account: process.env.CDK_DEFAULT_ACCOUNT, region: process.env.CDK_DEFAULT_REGION },
+    stackName: `GoondoriProvisionedConcurrencyStack${NODE_ENV_PASCAL}`,
+    env: { account: ACCOUNT_ID, region: REGION },
 
   /* Uncomment the next line if you know exactly what Account and Region you
    * want to deploy the stack to. */
